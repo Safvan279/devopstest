@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - main
-      - dev
-      - qa
 
 jobs:
   build-and-deploy:
@@ -18,7 +16,7 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: '10.0.x' # change to 8.0 if your project targets .NET 8
+        dotnet-version: '8.0.x' # change to 8.0 if your project targets .NET 8
 
     - name: Build and publish
       run: |
